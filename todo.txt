@@ -1,0 +1,111 @@
+08.13
+ 0.  继承 --完成
+ 1.  text 控件--完成
+ 2.  跳转相同页面--完成
+ 3.  参数机制--完成
+ 4.  repeat--基本完成
+ 5.  在读取pageConfig的时候就把相关的Style的适配以及兼容性处理了 －－ 完成
+
+ 08.21
+ 6.  listview －－ 完成70%
+ 7.  popover -- 基本完成
+ 8.  poplayout －－ 基本完成
+ 9.  viewpager －－基本完成
+ 10. 结合r.js 进行打包  是用node事先写入依赖文件 然后进行打包 -- 完成打包
+ 11. text丰富preText nextText －－ 基本完成
+ 12. segment_android -- 基本完成  但是还欠缺touch事件
+ 13. baseview setBadge -- 基本完成
+ 14. icon支持图片
+
+ 08.24
+
+ 15. listview 完善 行的增删操作，数据获取操作，下拉刷新，行的滑动操作 －－基本完成
+ 16. 各种tooltip loading －－基本完成
+ 17. 表单控件组（输入框 密码框 switch datepicker datetimepicker calendar checkbox radiobox checklist radiolist）
+ 18. listview 控件和repeat控件 扩展单选和多选的功能
+ 19. 表单和数据源的操作绑定机制 －－ 暂不做
+
+
+ 08.29
+
+
+ View 的下拉刷新和上拉加载更多 的触发回调 根据插件中是否存在该回调方法 决定是否绑定touch事件  --  完成
+
+
+ ！！！丰富及完善控件
+
+
+
+define(["utils","base"],function(utils,baseClass){
+    var Component = function(config){
+        var _this = this;
+        Component.baseConstructor.call(this,config);
+        this.$el.addClass("yy-repeat");
+    }
+    utils.extends(Component,baseClass);
+
+    return Component;
+});
+
+
+
+
+1. 为了解决JSON配置文件过大的问题 现在引入了拆分JSON为多个文件的机制
+
+PC端的框架已经更新  移动端稍后更新
+
+步骤如下：
+
+在工程目录下新增一个文件夹用于存放拆分的JSON,这个文件可以按照业务需求进行命名，或者可以使用多层的文件进行管理。
+
+如果现在新增一个test.js  存放某个页面的部分UI配置  这个文件的基本结构为
+
+
+define(["../logic/backLogic"], function (pluginClass) {
+    pluginClass: pluginClass,
+    return {
+        components: {
+      		／*这里存放UI*／
+        }
+
+    };
+});
+
+新增一个后台逻辑 backLogic
+
+
+define(["utils"], function (utils) {
+    function pageLogic() {
+        //这里不写任何逻辑
+    }
+
+    pageLogic.prototype = {
+    	/*
+            逻辑写在这里
+        */
+    };
+    return pageLogic;
+});
+
+
+然后可以在页面配置中引入这个文件的配置
+
+/**
+ * 页面的UI配置
+* ../xx/test 这个路径按照自己的定义来定
+ **/
+define(["../logic/waitmeapprove", "../parts/common", 'utils’,’../xx/test’], function (pluginClass, c, utils, test) {
+    var Re = {
+        pluginClass: pluginClass,
+        style: {
+            backgroundColor: c.backColor
+        },
+	    children:[test],  // 引入扩展UI文件  这里可以引入多个页面的扩展配置
+        root: ["segment", "viewpager"],
+        components: {
+		／*这里是页面的配置*／
+       },
+
+    };
+    return Re;
+});

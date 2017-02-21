@@ -1,0 +1,74 @@
+/**
+ * Created by xiaoz on 16/8/13.
+ */
+define(["../logic/page1Repeat"],function(pluginClass){
+    return {
+        pluginClass:pluginClass,
+        style:{
+            backgroundColor:"#f0f4f6"
+        },
+        root:["formrepeat"],
+        components:{
+            formrepeat:{
+              type:"repeat",
+              root:["formrepeat_icon","formrepeat_righticon"],
+              items:[
+                  {title:"Form",icon:"icomoon_e903"},
+                  {title:"TimePicker",icon:"icomoon_e903"},
+                ],
+              style:{
+                backgroundColor:"#fff",
+                flexDirection:"column"
+              },
+              itemStyle:{
+                backgroundColor:"#fff",
+                padding:"8px 0px",
+                flexDirection:"row",
+              },
+              splitStyle:{
+                  borderTop:"1px solid #e2e8ed",
+                  marginLeft:"40px",
+                  transform:"scaleY(.5)"
+              },
+            },
+            formrepeat_icon:{
+              type:"icon",
+              font:"icomoon_e901",
+              font_bind:"icon",
+              text:"MenuItem",
+              text_bind:"title",
+              textStyle:{
+                marginLeft:"5px",
+                color:"#8899a6",
+                fontSize:"14px"
+              },
+              textPos:"right",
+              style:{
+                flex:1,
+                width:"130px",
+                marginLeft:"7px",
+                height:"30px",
+                justifyContent:"flex-start"
+              },
+              iconStyle:{
+                fontSize:"24px",
+                color:"#8899a6"
+              }
+            },
+            formrepeat_righticon:{
+              type:"icon",
+              iconStyle:{
+                fontSize:14
+              },
+              style:{
+                width:"30px",
+                height:"30px"
+              },
+              font:"icomoon_e913"
+            },
+
+        }
+    };
+});/**
+ * Created by xiaoz on 16/8/13.
+ */

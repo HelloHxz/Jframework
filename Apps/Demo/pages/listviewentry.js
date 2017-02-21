@@ -1,0 +1,122 @@
+define(["../logic/listviewentry"],function(pluginClass){
+    return {
+        pluginClass:pluginClass,
+        style:{
+            backgroundColor:"#f0f3f4"
+        },
+        root:["page_header","pageContentView"],
+        components:{
+            page_header:{
+                type:"view",
+                root:["backIcon","header_title"],
+                style:{
+                    height:"44px",
+                    borderBottom:"1px solid #e2e8ed",
+                    backgroundColor:"#fff",
+                    justifyContent:"center",
+                    alignItems:"center"
+                }
+            },
+            header_title:{
+                type:"text",
+                text:"ListView",
+                style:{
+                  fontSize:14
+                }
+            },
+            backIcon:{
+              type:"icon",
+              text:"返回",
+              style:{
+                position: "absolute",
+                left: "0px",
+                color: "rgb(0, 147, 255)",
+                top: "7px",
+                width: "50px",
+                height: "30px",
+              },
+              textStyle: {
+                fontSize: "14px"
+              }
+            },
+            pageContentView:{
+                type:"view",
+                root:["简单的ListView","行侧滑ListView","多选ListView","单选ListView","ListViewDemoBtn"],
+                style:{
+                  flex:1,
+                  overflowY:"auto"
+                }
+            },
+            简单的ListView:{
+                type:"button",
+                text:"简单的ListView",
+                style:{
+                    marginTop:20,
+                    width:"100%",
+                    borderLeftWidth:0,
+                    borderRightWidth:0,
+                    borderRadius:0,
+                    height:38,
+                    borderColor:"#eee",
+                    justifyContent:"center"
+                },
+            },
+            行侧滑ListView:{
+                type:"button",
+                text:"行侧滑和基本行操作ListView",
+                style:{
+                    marginTop:20,
+                    width:"100%",
+                    borderLeftWidth:0,
+                    borderRightWidth:0,
+                    borderRadius:0,
+                    height:38,
+                    borderColor:"#eee",
+                    justifyContent:"center"
+                },
+            },
+            多选ListView:{
+                type:"button",
+                text:"多选ListView",
+                style:{
+                    marginTop:20,
+                    width:"100%",
+                    borderLeftWidth:0,
+                    borderRightWidth:0,
+                    borderRadius:0,
+                    height:38,
+                    borderColor:"#eee",
+                    justifyContent:"center"
+                },
+            },
+            单选ListView:{
+                type:"button",
+                text:"单选ListView",
+                style:{
+                    marginTop:20,
+                    width:"100%",
+                    borderLeftWidth:0,
+                    borderRightWidth:0,
+                    borderRadius:0,
+                    height:38,
+                    borderColor:"#eee",
+                    justifyContent:"center"
+                },
+            },
+            ListViewDemoBtn:{
+                type:"button",
+                text:"ListViewDemo",
+                style:{
+                    marginTop:20,
+                    width:"100%",
+                    borderLeftWidth:0,
+                    borderRightWidth:0,
+                    borderRadius:0,
+                    height:38,
+                    borderColor:"#eee",
+                    justifyContent:"center"
+                },
+            },
+        }
+    };
+});
