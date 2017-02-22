@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="./css/doccommon.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class='doc-dabiaoti'>组件</div>
+        <div class='doc-zhengwen'>
+            在本框架中,最小的组成单位为组件,在页面的UI文件中进行配置声明,在逻辑文件中处理该控件的数据,状态以及和其他组件交互。
+        </div>
+        <div class='doc-fubiaoti'>
+            组件配置的基本组成
+        </div>
+        <pre><code class='javascript'>
+组件key:{
+    type:"组件类型",
+    style:{
+
+    }
+}
+        </code></pre>
+
+        <div class='doc-miaoshu doc-important'><ul class='doc-ul'>
+            <li>保证组件的Key值在当前页面中是<span class='doc-order'>唯一的</span></li>
+        </ul></div>
+        <div class='doc-zhengwen'>
+            组件的声明都保存在页面UI文件中的<span class='doc-order'>components</span>变量下,
+            <span class='doc-order'>components</span>变量是一个JSON键值对象,虽然Web Dom结构是树状的,
+            但是这里是扁平化的使用JSON键值对象去保存组件的配置声明。
+        </div>
+        <div class='doc-fubiaoti'>组件分类</div>
+        <ul class='doc-ul'>
+            <li>容器组件</li>
+            <li>非容器组件</li>
+        </ul>
+    </body>
+    <script src="./libs/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</html>

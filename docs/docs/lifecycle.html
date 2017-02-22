@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="./css/doccommon.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class='doc-dabiaoti'>页面生命周期<span class='doc-subdabiaoti'>LifeCycle</span></div>
+        <div class='doc-zhengwen'>页面的生命周期在页面逻辑文件中进行编写。</div>
+        <div class='doc-fubiaoti'>1.onPageLoad</div>
+        <div class='doc-area'>
+            页面加载完成触发的方法,但是在方法执行的时候,可能部分组件还未初始化完成,所以要操作组件的话,需要使用
+            <span class='doc-order'>delegate</span>方法
+            <span onClick ="goToDelegate()" class='doc-link'>详情</span>
+        </div>
+        <div class='doc-fubiaoti'>2.onPageResume</div>
+        <div class='doc-area'>
+            路由跳转的时候,当前页面会缓存下来,在此回到该页面的时候,触发该方法,如果在跳转后刷新页面的话,路由回来不再触发该方法,
+            而是重新生成该页面走onPageLoad
+        </div>
+        <div class='doc-fubiaoti'>3.onPageBeforeLeave</div>
+        <div class='doc-area'>
+            页面离开之前触发的方法, <span class='doc-order1'>return false </span>组织页面离开
+        </div>
+    </body>
+    <script>
+        function goToDelegate(){
+            window.parent.Go("interactive");
+        }
+    </script>
+</html>

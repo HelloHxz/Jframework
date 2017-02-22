@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="./css/doccommon.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class='doc-dabiaoti'>重复<span class='doc-subdabiaoti'>Repeat</span></div>
+        <div class='doc-zhengwen'>该组件用于展示多项重复的组件。功能大体类似于ListView但是该组件用于展示无需分页的数据。</div>
+        <ul class='doc-ul'><li>
+                可以实现九宫格,Menu的效果
+            </li>
+            <li>
+               可以实现单选Menu,多选Menu的组件
+            </li>
+            <li>
+               可以配合其他容器组件实现多种效果
+            </li>
+            <li>
+               提供各种数据绑定,数据更新,行操作的API
+            </li>
+        </ul>
+
+            <div class='doc-miaoshu'>Repeat组件是RepeatItem组件的集合</div>
+        <div class='doc-fubiaoti'>UI配置选项</div>
+         <ul class='doc-pros-ul'>
+            <li>
+                <div class='doc-pros-top'>type<span class='doc-pros-type'>string</span></div>
+                <div class='doc-pros-desc'>指定组件的类型为<span class='doc-order'>repeat</span></div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>root<span  class='doc-pros-type'>array</span></div>
+                <div class='doc-pros-desc'>行第一级子组件的Key的集合,用于描述行的字组件的组成</div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>style<span  class='doc-pros-type'>json</span></div>
+                <div class='doc-pros-desc'>列表整体的样式配置</div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>items<span  class='doc-pros-type'>Array</span></div>
+                <div class='doc-pros-desc'>通过该数据制定组件的数据,也可以通过后期动态API绑定</div>
+            </li>
+            <li>
+              <div class='doc-pros-top'>nodata<span  class='doc-pros-type'>string</span></div>
+              <div class='doc-pros-desc'>制定列表在没有数据的时候展示的组件Key</div>
+          </li>
+            <li>
+              <div class='doc-pros-top'>itemStyle<span  class='doc-pros-type'>json</span></div>
+              <div class='doc-pros-desc'>行的样式配置,比如可以指定行的排列方向</div>
+          </li>
+
+         </ul>
+        <div class='doc-fubiaoti'>Repeat 属性</div>
+         <ul class='doc-pros-ul'>
+             <li>
+               <div class='doc-pros-top'>datasource<span  class='doc-pros-type'>Array</span></div>
+               <div class='doc-pros-desc'>数据源</div>
+           </li>
+            <li>
+                <div class='doc-pros-top'>bindData(datasource)<span class='doc-pros-type'>function</span></div>
+                <div class='doc-pros-desc'>绑定数据</div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>addItem(itemData,index)<span class='doc-pros-type'>function</span></div>
+                <div class='doc-pros-desc'>插入一行数据</div>
+            </li>
+         </ul>
+         <div class='doc-fubiaoti'>RepeatItem 属性</div>
+          <ul class='doc-pros-ul'>
+             <li>
+                 <div class='doc-pros-top'>type<span class='doc-pros-type'>string</span></div>
+                 <div class='doc-pros-desc'>制定组件的类型为<span class='doc-order'>listview</span></div>
+             </li>
+          </ul>
+          <div class='doc-fubiaoti'>例子(一) 简单的Repeat</div>
+          <div class='doc-fubiaoti'>例子(二) 基本的行操作</div>
+          <div class='doc-fubiaoti'>例子(三) 九宫格</div>
+          <div class='doc-fubiaoti'>例子(四) 单选Repeat</div>
+          <div class='doc-fubiaoti'>例子(五) 多选Repeat</div>
+    </body>
+</html>
