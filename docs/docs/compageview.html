@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="./css/doccommon.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class='doc-dabiaoti'>页面<span class='doc-subdabiaoti'>PageView</span></div>
+        <div class='doc-zhengwen'>
+            这是最核心的组件,整个UI文件配置就是页面组件的配置。
+        </div>
+        <div class='doc-fubiaoti'>基本结构</div>
+
+        <pre><code class='javascript'>
+define(["../logic/逻辑页面名称"],function(pluginClass){
+    return {
+        pluginClass:pluginClass,
+        style:{
+            backgroundColor:"#f0f4f6"
+        },
+        root:[],
+        components:{
+
+        }
+    };
+});
+        </code></pre>
+        <div class='doc-fubiaoti'>UI属性</div>
+        <ul class='doc-pros-ul'>
+            <li>
+                <div class='doc-pros-top'>pluginClass<span class='doc-pros-type'>object</span></div>
+                <div class='doc-pros-desc'>定制页面后台处理对象实例</div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>root<span  class='doc-pros-type'>Array</span></div>
+                <div class='doc-pros-desc'>制定页面的第一级的组件Key数组</div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>style<span  class='doc-pros-type'>json</span></div>
+                <div class='doc-pros-desc'>样式配置</div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>components<span  class='doc-pros-type'>json</span></div>
+                <div class='doc-pros-desc'>页面所有组件的配置,以key-value的形式存储组件的配置</div>
+            </li>
+        </ul>
+
+        <div class='doc-fubiaoti'>API</div>
+        <ul class='doc-pros-ul'>
+            <li>
+                <div class='doc-pros-top'>go(pagekey,params)<span class='doc-pros-type'>function</span></div>
+                <div class='doc-pros-desc'>路由跳转API<span class='doc-link'>详情</span></div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>replaceGo(pagekey,params)<span  class='doc-pros-type'>function</span></div>
+                <div class='doc-pros-desc'>路由跳转API<span class='doc-link'>详情</span></div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>goBack()<span  class='doc-pros-type'>function</span></div>
+                <div class='doc-pros-desc'>回到上一个页面<span class='doc-link'>详情</span></div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>showPage(pageKey,params)<span  class='doc-pros-type'>function</span></div>
+                <div class='doc-pros-desc'>展示另外一个页面<span class='doc-link'>详情</span></div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>showLoading<span  class='doc-pros-type'>function</span></div>
+                <div class='doc-pros-desc'>Loading效果<span class='doc-link'>详情</span></div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>Ajax(options)<span  class='doc-pros-type'>function</span></div>
+                <div class='doc-pros-desc'>Ajax请求<span class='doc-link'>详情</span></div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>delegate(comKey,callback)<span  class='doc-pros-type'>function</span></div>
+                <div class='doc-pros-desc'>组件操作API<span class='doc-link'>详情</span></div>
+            </li>
+            <li>
+                <div class='doc-pros-top'>delegate(comKey,callback)<span  class='doc-pros-type'>function</span></div>
+                <div class='doc-pros-desc'>组件操作API<span class='doc-link'>详情</span></div>
+            </li>
+        </ul>
+    </body>
+
+        <script src="./libs/highlight.pack.js"></script>
+        <script>
+            hljs.initHighlightingOnLoad();
+        </script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="./css/doccommon.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class='doc-dabiaoti'>样式<span class='doc-subdabiaoti'>Style</span></div>
+        <div class='doc-zhengwen'>
+            该框架通过两种方式改变组件的样式
+        </div>
+
+        <div class='doc-fubiaoti'>
+            1.通过组件提供的样式配置属性进行样式配置,通过JSON的形式进行配置,规则参照Jquery设置样式规则
+        </div>
+        <pre><code class='json'>
+某某Style:{
+    flex:1,
+    width:"130px",
+    marginLeft:"7px",
+    height:"30px",
+    alignItems:"center",
+    justifyContent:"flex-start"
+}
+         </pre></code>
+        <div class='doc-area doc-important'>
+            框架默认按照375*667(iphone6)进行屏幕适配<br/>所以比如<span class='doc-order'>height:30,width:30</span>在不同设备上的值是不一样的。所以要实现正方形便引入了<span class='doc-order'>w:30</span>,
+                默认px可以省略不写
+        </div>
+        <div class='doc-fubiaoti'>
+            2.通过给组件设置className属性
+        </div>
+        <div class='doc-area'>
+            通过该方式可以给组件的最外层元素设置一个class样式名称,然后可以通过层级关系给组件的子Dom元素设置具体的样式。<br/>
+            通过这种方式也可以覆盖组件的默认样式
+        </div>
+        <pre><code class='json' style="margin-top:10px">
+the_button:{
+    className:"my-button-classname",
+    type:"button",
+    text:"点击",
+    style:{
+        margin:"10px auto",
+        width:"130px"
+    }
+}
+         </pre></code>
+        <div class='doc-xiaobiaoti'>
+            2.1 在<span class='doc-order'>.~/Apps/具体项目名称/css</span>文件夹 新建一个样式文件
+        </div>
+        <div class='doc-xiaobiaoti'>
+            2.2 在<span class='doc-order'>.~/Apps/具体项目名称/index.html</span> 文件中进行引入
+        </div>
+        <div class='doc-miaoshu'>无需在/index.tpl中引入,因为在打包的过程会将该样式文件合并</div>
+
+
+
+    </body>
+    <script src="./libs/highlight.pack.js"></script>
+    <script>
+        hljs.initHighlightingOnLoad();
+    </script>
+</html>
