@@ -4,7 +4,7 @@ define([],function(){
   var tipConfigs = [
     {
       text:"操作成功",
-      font:"icomoon_e913",
+      font:"FontAwesome_f00c",
       textPos:"right",
       duration:2000,
       pos:"top",
@@ -13,7 +13,7 @@ define([],function(){
         marginLeft:5
       },
       iconStyle:{
-        w:26,
+        w:30,
         fontSize:18,
         backgroundColor:"rgb(15,198,96)",
         color:"#fff"
@@ -45,9 +45,9 @@ define([],function(){
       textStyle:{
           marginTop:5
       },
-      font:"icomoon_e913",
+      font:"FontAwesome_f00c",
       iconStyle:{
-        w:26,
+        w:30,
         fontSize:18,
         borderRadius:"100%",
         backgroundColor:"rgb(15,198,96)",
@@ -59,9 +59,9 @@ define([],function(){
           marginTop:5
       },
       duration:2000,
-      font:"icomoon_e913",
+      font:"FontAwesome_f00c",
       iconStyle:{
-        w:26,
+        w:30,
         fontSize:18,
         borderRadius:"100%",
         backgroundColor:"rgb(15,198,96)",
@@ -75,9 +75,9 @@ define([],function(){
       },
       textPos:"right",
       duration:2000,
-      font:"icomoon_e913",
+      font:"FontAwesome_f00c",
       iconStyle:{
-        w:26,
+        w:30,
         fontSize:18,
         borderRadius:"100%",
         backgroundColor:"rgb(15,198,96)",
@@ -91,7 +91,7 @@ define([],function(){
       },
       textPos:"right",
       duration:2000,
-      font:"icomoon_e913",
+      font:"FontAwesome_f00c",
       style:{
         height:32
       },

@@ -8,7 +8,6 @@ define(["../logic/TabbarDemo"],function(pluginClass){
         components:{
           tabbar:{
             type:"tabbarview",
-            selectedKeyFromUrl:"pagename",
             style:{
               flex:1
             },

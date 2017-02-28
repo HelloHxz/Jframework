@@ -12,9 +12,9 @@ define([],function(){
           var _this = this;
           if(sender.config.$$datasource.title == "开通会员"){
             window.setTimeout(function(){
-              _this.config.pageview.ownerPage.hideCurShowPage();
+              _this.pageview.ownerPage.hideCurShowPage();
             },400);
-            this.pageview.go("repeatDemo",{id:"192837221"});
+            this.pageview.go("repeatentry",{id:"192837221"});
           }
         }
     };

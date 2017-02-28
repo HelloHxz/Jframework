@@ -551,7 +551,8 @@ define(["utils", "base"], function (utils, baseClass) {
         var splitLine;
         if (this.splitStyle) {
             if (this.components.length > 0) {
-                splitLine = $("<div></div>");
+              var splitClass = "repeat-splitline-"+index;
+                splitLine = $("<div class='"+splitClass+"'></div>");
                 item_instance.splitLine = splitLine;
                 utils.css(splitLine, this.splitStyle);
             }

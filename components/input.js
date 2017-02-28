@@ -19,6 +19,11 @@ define(["utils", "base"], function (utils, baseClass) {
             this.input.val(this.config.value);
         }
         utils.css(this.input, inputStyle);
+
+        if (this.config.disabled) {
+           this.setDisabled(true);
+        }
+
         if (isInForm === true) {
             this.Form = $("<form action=''></form>");
             this.Form.bind("submit", function (e) {
@@ -143,6 +148,14 @@ define(["utils", "base"], function (utils, baseClass) {
         if (blur_nameMethod) {
             this.input.bind("blur", function (e) {
                 !_this.disabled && blur_nameMethod && blur_nameMethod.call(_this.pageview.plugin, _this, {e: e});
+            });
+        }
+
+        var input_name = config.comKey + "_input";
+        var input_nameMethod = _this.pageview.plugin[input_name];
+        if (input_nameMethod) {
+            this.input.bind("input", function (e) {
+                !_this.disabled && input_nameMethod && input_nameMethod.call(_this.pageview.plugin, _this, {e: e});
             });
         }
     }

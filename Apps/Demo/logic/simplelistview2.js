@@ -1,4 +1,4 @@
-define([],function(){
+define(["../common/data"],function(DemoData){
     function pageLogic(config){
       this.pageview = config.pageview;
     }
@@ -54,6 +54,10 @@ define([],function(){
             this.pageview.delegate("header_right_text",function(target){
                 target.setText(sender.parent.selectedRows.length);
             });
+        },
+        //demo演示的时候 因为没有部署后台 所以为了显示效果 直接定义了一个很简单的数据模拟
+        listview_demo演示:function(sender,params){
+            return DemoData.getListData(params.params);
         }
 
     };

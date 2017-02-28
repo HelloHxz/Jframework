@@ -4,8 +4,7 @@ define([],function(){
     }
     pageLogic.prototype = {
       toolbarIcon_init:function(sender,params){
-        sender.config.text = sender.datasource.title;
-        sender.config.font = sender.datasource.icon;
+      
       },
       morePopover_init:function(sender,params){
         this.morePopver = sender;

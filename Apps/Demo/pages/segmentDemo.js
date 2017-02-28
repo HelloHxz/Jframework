@@ -94,7 +94,7 @@ define(["../logic/segmentDemo"],function(pluginClass){
             },
             segment_ios2:{
               type:"segment_ios",
-              items:[{title:"全部",icon:"icomoon_e907"},{title:"未审核",icon:"icomoon_e908"},{title:"已审核",icon:"icomoon_e906"}],
+              items:[{title:"全部",icon:"FontAwesome_f0c9"},{title:"未审核",icon:"FontAwesome_f006"},{title:"已审核",icon:"FontAwesome_f005"}],
               root:["segment_ios_item2"],
               style:{height:24,width:300,margin:"15px auto"}
             },
@@ -110,7 +110,7 @@ define(["../logic/segmentDemo"],function(pluginClass){
             },
             segment_android2:{
               type:"segment_android",
-              items:[{title:"全部",icon:"icomoon_e907"},{title:"未审核",icon:"icomoon_e908"},{title:"已审核",icon:"icomoon_e906"}],
+              items:[{title:"全部",icon:"FontAwesome_f0c9"},{title:"未审核",icon:"FontAwesome_f006"},{title:"已审核",icon:"FontAwesome_f005"}],
               root:["segment_android_item2"],
               style:{height:34,marginTop:"30px",backgroundColor:"#f5f5f5"}
             },
@@ -127,9 +127,9 @@ define(["../logic/segmentDemo"],function(pluginClass){
             segment_ios3:{
               type:"segment_ios",
               selectedIndex:1,
-              items:[{title:"全部",icon:"icomoon_e907"},{title:"未审核",icon:"icomoon_e908"},{title:"已审核",icon:"icomoon_e906"}],
+              items:[{title:"全部",icon:"FontAwesome_f0c9"},{title:"未审核",icon:"FontAwesome_f006"},{title:"已审核",icon:"FontAwesome_f005"}],
               root:["segment_ios_item3"],
-              style:{height:36,width:300,margin:"15px auto"}
+              style:{height:42,width:300,margin:"15px auto"}
             },
             segment_ios_item3:{
               type:"icon",
@@ -139,15 +139,15 @@ define(["../logic/segmentDemo"],function(pluginClass){
               text:"test",
               textPos:"bottom",
               selectedClassName:"yy-sgm-item-selected",
-              textStyle:{color:"rgb(0, 147, 255)",fontSize:12},
+              textStyle:{color:"rgb(0, 147, 255)",fs:12},
               iconStyle:{color:"rgb(0, 147, 255)",fontSize:19}
             },
             segment_android3:{
               type:"segment_android",
               selectedIndex:1,
-              items:[{title:"全部",icon:"icomoon_e907"},{title:"未审核",icon:"icomoon_e908"},{title:"已审核",icon:"icomoon_e906"}],
+              items:[{title:"全部",icon:"FontAwesome_f0c9"},{title:"未审核",icon:"FontAwesome_f006"},{title:"已审核",icon:"FontAwesome_f005"}],
               root:["segment_android_item3"],
-              style:{height:36,marginTop:"30px"}
+              style:{height:42,marginTop:"30px"}
             },
             segment_android_item3:{
               type:"icon",
@@ -163,7 +163,7 @@ define(["../logic/segmentDemo"],function(pluginClass){
             segment_ios4:{
               type:"segment_ios",
               selectedIndex:2,
-              items:[{title:"全部",icon:"icomoon_e907"},{title:"未审核",icon:"icomoon_e908"},{title:"已审核",icon:"icomoon_e906"}],
+              items:[{title:"全部",icon:"FontAwesome_f0c9"},{title:"未审核",icon:"FontAwesome_f006"},{title:"已审核",icon:"FontAwesome_f005"}],
               root:["segment_ios_item4"],
               style:{height:26,width:300,margin:"15px auto"}
             },
@@ -177,7 +177,7 @@ define(["../logic/segmentDemo"],function(pluginClass){
             segment_android4:{
               type:"segment_android",
               selectedIndex:2,
-              items:[{title:"全部",icon:"icomoon_e907"},{title:"未审核",icon:"icomoon_e908"},{title:"已审核",icon:"icomoon_e906"}],
+              items:[{title:"全部",icon:"FontAwesome_f0c9"},{title:"未审核",icon:"FontAwesome_f006"},{title:"已审核",icon:"FontAwesome_f005"}],
               root:["segment_android_item4"],
               style:{height:40,marginTop:"30px"}
             },

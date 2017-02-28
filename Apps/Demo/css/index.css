@@ -9,3 +9,26 @@
 .list-checkicon-selected .yy-icon-code:before{
     content: "\f058";
 }
+
+.app-repeat .yy-repeatitem:before {
+    position: absolute;
+    right: 0;
+    width: 1px;
+    background-color: #eee;
+    top: 0;
+    bottom: 0;
+    content: "";
+}
+
+.app-repeat .yy-repeatitem:active {
+    background-color: #EEEEEE;
+}
+.demo-repeat-2 .repeat-splitline-5,.demo-repeat-2 .repeat-splitline-7,.demo-repeat-2 .repeat-splitline-9{
+  height:15px;
+  background-color: #f0f3f4;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+margin-left: 0 !important;
+transform: scaleY(1) !important;
+
+}

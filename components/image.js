@@ -24,6 +24,7 @@ define(["utils","base"],function(utils,baseClass){
         this.img = new Image();
         var preErrorImagesrc = "";
         this.img.onload = function(){
+
           var style = {};
             if(height&&width){
                 var size = utils.getPicSize(width,height,_this.img.width,_this.img.height);
@@ -39,6 +40,11 @@ define(["utils","base"],function(utils,baseClass){
             utils.css($(_this.img),style);
         };
         this.img.onerror = function(){
+          var imgOnErrorMethodName = _this.config.comKey +"_error";
+          var imgOnErrorMethod = _this.pageview.plugin[imgOnErrorMethodName];
+          if(imgOnErrorMethod){
+            imgOnErrorMethod.call(_this.pageview.plugin,_this,{});
+          }
             if(_this.title.length>0){
                 var title = utils.getImgTitle(_this.title);
                 _this.$el.html(title);

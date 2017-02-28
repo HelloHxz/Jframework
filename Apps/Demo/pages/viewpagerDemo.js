@@ -66,7 +66,7 @@ define(["../logic/viewpagerDemo"],function(pluginClass){
             },
             viewpager:{
               type:"viewpager",
-              defaultKey:"viewpage_item1",
+              defaultKey:"viewpageItem1",
               style:{
                 flex:1,
                 marginTop:6,
@@ -74,37 +74,15 @@ define(["../logic/viewpagerDemo"],function(pluginClass){
                 backgroundColor:"#fff",
               }
             },
-            viewpage_item1:{
-              type:"view",
-              style:{
-                flex:1,
-                backgroundColor:"red"
-              }
-            },
-            viewpage_item2:{
-              type:"view",
-              style:{
-                flex:1,
-                backgroundColor:"yellow"
-              }
-            },
-            viewpage_item3:{
-              type:"view",
-              style:{
-                flex:1,
-                backgroundColor:"green"
-              }
-            },
+
             segment_ios2:{
               type:"segment_ios",
-              items:[{title:"全部",icon:"icomoon_e907"},{title:"未审核",icon:"icomoon_e904"},{title:"已审核",icon:"icomoon_e905"}],
+              items:[{title:"全部"},{title:"未审核"},{title:"已审核"}],
               root:["segment_ios_item2"],
               style:{height:24,width:300}
             },
             segment_ios_item2:{
               type:"icon",
-              font:"icomoon_e910",
-              text:"test",
               selectedClassName:"yy-sgm-item-selected",
               textStyle:{color:"rgb(0, 147, 255)",fontSize:13,marginLeft:3},
               iconStyle:{color:"rgb(0, 147, 255)",fontSize:16}

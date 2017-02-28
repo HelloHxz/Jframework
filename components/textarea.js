@@ -104,7 +104,7 @@ define(["utils","base"],function(utils,baseClass){
     };
     Component.prototype.focus = function(str){
       var _this = this;
-      _this.input.focus();
+      _this.input&&_this.input.focus();
     };
     return Component;
 });

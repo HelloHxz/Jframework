@@ -81,7 +81,8 @@ function(pluginClass) {
       },
       buttonGroup:{
         type:"repeat",
-        items:[{title:"回复",icon:"icomoon_e904"},{title:"免打扰",icon:"icomoon_e905"},{title:"转发",icon:"icomoon_e908"}],
+        items:[{label:"回复",icon:"icomoon_e904"},
+        {label:"下载",icon:"FontAwesome_f0ed"},{label:"转发",icon:"FontAwesome_f08e"}],
         root:["toolbarIcon"],
         style:{
           flex:1,
@@ -100,13 +101,13 @@ function(pluginClass) {
       },
       toolbarIcon:{
         type:"icon",
-        font:"icomoon_e910",
+        font_bind:"icon",
+        text_bind:"label",
         style:{flex:1},
         iconStyle:{
           color:"#0093ff",
           fontSize:14
         },
-        text:"sss",
         textStyle:{
           color:"#0093ff",
           marginLeft:5,
@@ -115,7 +116,7 @@ function(pluginClass) {
       },
       moreBtn:{
         type:"icon",
-        font:"icomoon_e90e",
+        font:"FontAwesome_f141",
         iconStyle:{
           color:"#0093ff",
           fontSize:15

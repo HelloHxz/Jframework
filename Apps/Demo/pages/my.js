@@ -4,9 +4,9 @@ define(["../logic/my"],function(pluginClass){
         style:{
             backgroundColor:"#f0f4f6"
         },
-        root:["page2_header","page2_btn1","page2_btn2"],
+        root:["paga_header"],
         components:{
-            page2_header:{
+            paga_header:{
                 type:"view",
                 root:["backIcon","right_icon","header_title"],
                 style:{
@@ -49,21 +49,6 @@ define(["../logic/my"],function(pluginClass){
                 },
                 iconStyle:{
                     fontSize:"20px"
-                }
-            },
-            page2_btn1:{
-                type:"button",
-                title:"跳转到下一页",
-                style:{
-                    margin:"10px auto",
-                    width:"130px"
-                }
-            },
-            page2_btn2:{
-                type:"button",
-                mode:"2",
-                style:{
-                    margin:"10px auto"
                 }
             }
         }

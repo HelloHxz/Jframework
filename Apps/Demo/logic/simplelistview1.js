@@ -1,4 +1,4 @@
-define([],function(){
+define(["../common/data"],function(DemoData){
     function pageLogic(config){
       this.pageview = config.pageview;
     }
@@ -78,6 +78,10 @@ define([],function(){
             //关闭行侧滑
             rowInstance.closeSwipe();
             this.pageview.showTip({text:"修改成功",duration:900});
+        },
+        //demo演示的时候 因为没有部署后台 所以为了显示效果 直接定义了一个很简单的数据模拟
+        listview_demo演示:function(sender,params){
+            return DemoData.getListData(params.params);
         }
 
     };

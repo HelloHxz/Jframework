@@ -19,6 +19,9 @@ define([],function(){
         单选ListView_click:function(){
             this.pageview.go("simplelistview3");
         },
+        综合ListView_click:function(){
+            this.pageview.go("ListViewDemo");
+        },
         backIcon_click:function(){
             this.pageview.goBack();
         }

@@ -41,7 +41,7 @@ define(["../logic/listviewentry"],function(pluginClass){
             },
             pageContentView:{
                 type:"view",
-                root:["简单的ListView","行侧滑ListView","多选ListView","单选ListView","ListViewDemoBtn"],
+                root:["简单的ListView","行侧滑ListView","多选ListView","单选ListView","综合ListView"],
                 style:{
                   flex:1,
                   overflowY:"auto"
@@ -103,9 +103,10 @@ define(["../logic/listviewentry"],function(pluginClass){
                     justifyContent:"center"
                 },
             },
-            ListViewDemoBtn:{
+
+            综合ListView:{
                 type:"button",
-                text:"ListViewDemo",
+                text:"综合ListView",
                 style:{
                     marginTop:20,
                     width:"100%",

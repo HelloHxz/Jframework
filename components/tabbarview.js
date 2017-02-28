@@ -1,7 +1,7 @@
 define(["utils","base"],function(utils,baseClass){
     var Component = function(config){
         var _this = this;
-        
+
         Component.baseConstructor.call(this,config);
         this.tabPages = {};
         this.$el.addClass("yy-tabbarview");
@@ -61,6 +61,12 @@ define(["utils","base"],function(utils,baseClass){
         });
       }else{
         this.curPageInstance.$el.css({"left":"0"});
+        var onResumeMethod = this.curPageInstance.plugin.onPageResume;
+        if (onResumeMethod) {
+            onResumeMethod.call(this.curPageInstance.plugin, this.curPageInstance, {
+                isForward: false
+            });
+        }
         this.pageview.hideLoadingProgressbar();
       }
 

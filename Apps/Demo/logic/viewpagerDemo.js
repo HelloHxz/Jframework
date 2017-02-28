@@ -15,11 +15,11 @@ define([],function(){
       },
       segment_ios2_change:function(sender,params){
         if(params.item.datasource.title=="未审核"){
-          this.viewpager.showItem("viewpage_item2");
+          this.viewpager.showItem("viewpageItem3");
         }else if(params.item.datasource.title=="全部"){
-          this.viewpager.showItem("viewpage_item1");
+          this.viewpager.showItem("viewpageItem1");
         }else{
-          this.viewpager.showItem("viewpage_item3");
+          this.viewpager.showItem("viewpageItem2");
         }
       }
     };

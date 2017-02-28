@@ -75,11 +75,17 @@ define([],function(){
         repeat_itemclick:function(sender,params){
           var title = sender.datasource.title;
           if(title== "Repeat"){
-            this.pageview.go("repeatDemo",{id:"192837221"});
+            this.pageview.go("repeatentry",{id:"192837221"});
           }else if(title=="Tabbar"){
-            this.pageview.go("TabbarDemo",{id:"12121"});//"$$pn":"message",
-          }else if(title=="CTEST"){
-            this.pageview.go("workcenter",{id:"12121"});//"$$pn":"message",
+            this.pageview.go("TabbarDemo",{id:"12121"});
+          }else if(title=="Icon"){
+            this.pageview.go("IconDemo",{id:"12121"});
+          }else if(title=="View"){
+            this.pageview.go("View",{id:"12121"});
+          }else if(title=="Image"){
+            this.pageview.go("ImageDemo",{id:"12121"});
+          }else if(title=="布局"){
+            this.pageview.go("layout",{id:"12121"});
           }
           else if(title=="Button"){
             this.pageview.go("ButtonDemo",{id:"192837221"});

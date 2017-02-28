@@ -11,24 +11,25 @@ define(["../logic/page1Repeat"],function(pluginClass){
         root:["repeat"],
         components:{
             repeat:{
-
                 type:"repeat",
-                className:"page1-repeat",
-                // selectedMode:"s",
                 root:["repeat_icon","rp_right_icon"],
                 items:[
                     {title:"新增页面示例",icon:"FontAwesome_f0f6"},
                     {title:"页面导航示例",icon:"FontAwesome_f0f6"},
+                    {title:"布局",icon:"FontAwesome_f0f6"},
+                    {title:"View",icon:"FontAwesome_f0f6"},
                     {title:"Text",icon:"FontAwesome_f0f6"},
                     {title:"Repeat",icon:"FontAwesome_f01e"},
                     {title:"Button",icon:"FontAwesome_f205"},
-                    {title:"Tabbar",icon:"FontAwesome_f1b3"},
+                    {title:"Icon",icon:"FontAwesome_f1b3"},
+                    {title:"Image",icon:"FontAwesome_f1b3"},
                     {title:"ListView",icon:"FontAwesome_f039"},
                     {title:"Segment",icon:"FontAwesome_f085"},
                     {title:"ViewPager",icon:"FontAwesome_f076"},
                     {title:"Popover",icon:"icomoon_e900"},
                     {title:"PopLayer",icon:"icomoon_e900"},
-                    {title:"ConditionSelector",icon:"FontAwesome_f290"},
+                    {title:"Tabbar",icon:"FontAwesome_f1b3"},
+                    // {title:"ConditionSelector",icon:"FontAwesome_f290"},
                     {title:"Calendar",icon:"FontAwesome_f073"}
                   ],
                 style:{

@@ -343,6 +343,10 @@ define(["utils","base"],function(utils,baseClass){
         this.pluginAfterLoadDataMethod = this.pageview.plugin[pluginAfterLoadDataMethodName];
 
 
+        var DemoMethodName = this.config.comKey+"_demo演示";
+        this.DemoMethod = this.pageview.plugin[DemoMethodName];
+
+
         this.init();
 
     }
@@ -771,10 +775,23 @@ define(["utils","base"],function(utils,baseClass){
 
             },
             error:function(err){
-              _this.setError(para);
-              if(para.error){
-                para.error(err);
-              }
+                if(_this.DemoMethod){
+                    var demodata = _this.DemoMethod.call(_this.pageview.plugin,_this,{params:params,isFirstLoad:para.isFirstLoad});
+                    if(demodata===null){
+                        _this.setError(para);
+                        if(para.error){
+                          para.error(err);
+                        }
+                    }else{
+                        para.success(demodata,isFirstLoad);
+                    }
+                }else{
+                    _this.setError(para);
+                    if(para.error){
+                      para.error(err);
+                    }
+                }
+
             }
       })
     }
@@ -998,7 +1015,6 @@ define(["utils","base"],function(utils,baseClass){
       var group;
       if(groupDom){
         var groupValue = groupDom.getAttribute("data-gval");
-        console.log(groupDom);
         group = this.groups[groupValue];
       }
       return group;
